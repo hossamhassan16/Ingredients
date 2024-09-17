@@ -1,0 +1,165 @@
+/* start global rules  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Young Serif", serif;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    width: 100%;
+}
+
+/* end global rules  */
+/* start inro  */
+.intro-container {
+    width: 750px;
+    margin: 0 auto;
+    padding-top: 50px;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+@media (max-width:767px) {
+    .intro-container {
+        width: 550px;
+        padding: 20px;
+    }
+}
+
+.intro-container .image img {
+    width: 750px;
+    border-radius: 20px;
+}
+
+@media (max-width:767px) {
+
+    .intro-container .image img,
+    .intro-container .text {
+        max-width: 100%;
+    }
+}
+
+.intro-container .text h2 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.intro-container .text p {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #9e0000;
+}
+
+/* end inro  */
+/* start preparation time box  */
+.time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preparation-time {
+    width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #00ffff26;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+@media (max-width:767px) {
+    .preparation-time {
+        width: 100%;
+    }
+}
+
+.preparation-time h2 {
+    color: #708fc6;
+    margin-bottom: 0;
+}
+
+ul li .title {
+    font-weight: bold;
+}
+
+ul li {
+    margin-bottom: 15px;
+    position: relative;
+    color: #9e0000;
+}
+
+ul li::before {
+    content: ".";
+    position: absolute;
+    top: -3px;
+    left: -30px;
+    font-weight: bold;
+}
+
+/* end preparation time box  */
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
+    color: brown;
+}
+
+.instructions ol li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 20px;
+    color: #9e0000;
+}
+
+.instructions ol {
+    counter-reset: section;
+}
+
+.instructions ol li::before {
+    counter-increment: section;
+    content: counter(section) ".";
+    position: absolute;
+    top: -3px;
+    left: -30px;
+    font-weight: bold;
+    color: brown;
+}
+
+.nutrition .nutrition-p {
+    margin-bottom: 30px;
+}
+
+.nutrition-table {
+    width: 100%;
+    /* max-width: 400px; */
+    /* border-collapse: collapse; */
+}
+
+.nutrition-table td {
+    padding: 10px 35px;
+    font-size: 17px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-right: 29px;
+}
+
+.nutrition-table .value {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* .nutrition .info-box .info {
+    margin-left: 50px;
+} */
